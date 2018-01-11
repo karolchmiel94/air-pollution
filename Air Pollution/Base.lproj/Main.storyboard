@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NeX-vX-WKf">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Air_Pollution" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fde-VH-40k">
+                                <rect key="frame" x="114" y="98" width="146" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="146" id="32y-5p-YMg"/>
+                                    <constraint firstAttribute="height" constant="56" id="Qiu-RJ-ICK"/>
+                                </constraints>
+                                <state key="normal" title="Znajdź stację">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kqe-Hk-XK8">
+                                <rect key="frame" x="26" y="170" width="323" height="56"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="0sG-hh-o6u"/>
+                                </constraints>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="OXZ-y1-7m2">
+                                    <rect key="frame" x="0.0" y="0.0" width="323" height="56"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="BYZ-38-t0r" id="57l-95-So1"/>
+                                    </connections>
+                                </searchBar>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchResultCell" id="LZP-FN-NE9">
+                                        <rect key="frame" x="0.0" y="84" width="323" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LZP-FN-NE9" id="i4b-8H-Guy">
+                                            <rect key="frame" x="0.0" y="0.0" width="323" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Zrp-wF-Opq"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="1JH-hT-1vV"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kqe-Hk-XK8" secondAttribute="trailing" constant="26" id="MbK-Qi-08q"/>
+                            <constraint firstItem="Fde-VH-40k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YOD-f9-QfG"/>
+                            <constraint firstItem="Kqe-Hk-XK8" firstAttribute="top" secondItem="Fde-VH-40k" secondAttribute="bottom" constant="16" id="a92-NS-oBl"/>
+                            <constraint firstItem="Kqe-Hk-XK8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="26" id="fly-0o-L1k"/>
+                            <constraint firstItem="Fde-VH-40k" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="78" id="h1b-Wh-osV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="WA4-dd-VfO"/>
+                    <connections>
+                        <outlet property="button" destination="Fde-VH-40k" id="v20-4X-HKl"/>
+                        <outlet property="searchBar" destination="OXZ-y1-7m2" id="6nd-aI-rVD"/>
+                        <outlet property="searchResultsTableHeight" destination="0sG-hh-o6u" id="mJU-RH-opP"/>
+                        <outlet property="searchResultsTableView" destination="Kqe-Hk-XK8" id="2Az-Xl-5IF"/>
+                        <segue destination="NOs-em-vpk" kind="show" identifier="DetailsViewController" id="flD-8P-B67"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="716" y="31.934032983508249"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="578-7t-Ymc">
+            <objects>
+                <viewController storyboardIdentifier="DetailsViewController" id="NOs-em-vpk" customClass="DetailsViewController" customModule="Air_Pollution" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T1j-M4-eUS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Bsh-WX-sZ1"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Le-nC-xNK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1634" y="32"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Syc-QO-s2A">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="NeX-vX-WKf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="np6-v8-efc">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1iw-8B-ke1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fxm-bX-z4S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-271" y="32"/>
+        </scene>
+    </scenes>
+</document>
