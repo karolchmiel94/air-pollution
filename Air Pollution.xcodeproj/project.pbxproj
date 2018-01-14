@@ -19,6 +19,12 @@
 		3C538E6A200236C400CBEE1A /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C538E69200236C400CBEE1A /* Station.swift */; };
 		3C538E6C2002373A00CBEE1A /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C538E6B2002373A00CBEE1A /* City.swift */; };
 		3C538E6E2002557000CBEE1A /* Commune.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C538E6D2002557000CBEE1A /* Commune.swift */; };
+		3C74D7182008E0F6004C0E74 /* SensorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C74D7172008E0F6004C0E74 /* SensorTableViewCell.swift */; };
+		3C74D71A2008E197004C0E74 /* SensorTableViewCellContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C74D7192008E197004C0E74 /* SensorTableViewCellContent.swift */; };
+		3C74D71C200925AB004C0E74 /* StationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C74D71B200925AB004C0E74 /* StationData.swift */; };
+		3C74D71E200925E4004C0E74 /* StationIndexLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C74D71D200925E4004C0E74 /* StationIndexLevel.swift */; };
+		3C74D72120097F9B004C0E74 /* SensorValuesOldOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C74D72020097F9B004C0E74 /* SensorValuesOldOne.swift */; };
+		3C74D723200980CA004C0E74 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C74D722200980CA004C0E74 /* Sensor.swift */; };
 		C09A05A9C65718CB68110037 /* Pods_Air_Pollution.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95E4BC0C68B52D2300A0FFCE /* Pods_Air_Pollution.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +43,12 @@
 		3C538E69200236C400CBEE1A /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		3C538E6B2002373A00CBEE1A /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		3C538E6D2002557000CBEE1A /* Commune.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commune.swift; sourceTree = "<group>"; };
+		3C74D7172008E0F6004C0E74 /* SensorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorTableViewCell.swift; sourceTree = "<group>"; };
+		3C74D7192008E197004C0E74 /* SensorTableViewCellContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorTableViewCellContent.swift; sourceTree = "<group>"; };
+		3C74D71B200925AB004C0E74 /* StationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationData.swift; sourceTree = "<group>"; };
+		3C74D71D200925E4004C0E74 /* StationIndexLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationIndexLevel.swift; sourceTree = "<group>"; };
+		3C74D72020097F9B004C0E74 /* SensorValuesOldOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorValuesOldOne.swift; sourceTree = "<group>"; };
+		3C74D722200980CA004C0E74 /* Sensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
 		7A2454303D5A73672908B237 /* Pods-Air Pollution.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Air Pollution.release.xcconfig"; path = "Pods/Target Support Files/Pods-Air Pollution/Pods-Air Pollution.release.xcconfig"; sourceTree = "<group>"; };
 		95E4BC0C68B52D2300A0FFCE /* Pods_Air_Pollution.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Air_Pollution.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDAB27822D1820376B29D778 /* Pods-Air Pollution.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Air Pollution.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Air Pollution/Pods-Air Pollution.debug.xcconfig"; sourceTree = "<group>"; };
@@ -81,13 +93,15 @@
 			path = StationModels;
 			sourceTree = "<group>";
 		};
-		3C3C7AED2004145400C58D4F /* StationSensors */ = {
+		3C3C7AED2004145400C58D4F /* StationSensorsModels */ = {
 			isa = PBXGroup;
 			children = (
 				3C3C7AEA2004128E00C58D4F /* StationSensors.swift */,
+				3C74D71D200925E4004C0E74 /* StationIndexLevel.swift */,
 				3C3C7AEE2004146900C58D4F /* StationSensorParams.swift */,
+				3C74D71B200925AB004C0E74 /* StationData.swift */,
 			);
-			path = StationSensors;
+			path = StationSensorsModels;
 			sourceTree = "<group>";
 		};
 		3C409F3D20010ED9007AFB3A = {
@@ -112,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				3C409F4920010EDA007AFB3A /* AppDelegate.swift */,
+				3C74D7172008E0F6004C0E74 /* SensorTableViewCell.swift */,
 				3C5193C02005673800AC8693 /* ViewControllers */,
 				3C538E682002365100CBEE1A /* Models */,
 				3C02FE7820011A8F00678621 /* Images */,
@@ -136,9 +151,20 @@
 			isa = PBXGroup;
 			children = (
 				3C3C7AEC2004143900C58D4F /* StationModels */,
-				3C3C7AED2004145400C58D4F /* StationSensors */,
+				3C3C7AED2004145400C58D4F /* StationSensorsModels */,
+				3C74D71F20097F67004C0E74 /* SensorModels */,
+				3C74D7192008E197004C0E74 /* SensorTableViewCellContent.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3C74D71F20097F67004C0E74 /* SensorModels */ = {
+			isa = PBXGroup;
+			children = (
+				3C74D72020097F9B004C0E74 /* SensorValuesOldOne.swift */,
+				3C74D722200980CA004C0E74 /* Sensor.swift */,
+			);
+			path = SensorModels;
 			sourceTree = "<group>";
 		};
 		3CB61AB4F406CC25769B70C2 /* Frameworks */ = {
@@ -263,11 +289,15 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Air Pollution/Pods-Air Pollution-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Gifu/Gifu.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gifu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -285,10 +315,16 @@
 				3C3C7AEF2004146900C58D4F /* StationSensorParams.swift in Sources */,
 				3C538E6A200236C400CBEE1A /* Station.swift in Sources */,
 				3C5193C42005683700AC8693 /* DetailsViewController.swift in Sources */,
+				3C74D72120097F9B004C0E74 /* SensorValuesOldOne.swift in Sources */,
+				3C74D71E200925E4004C0E74 /* StationIndexLevel.swift in Sources */,
 				3C538E6E2002557000CBEE1A /* Commune.swift in Sources */,
+				3C74D71C200925AB004C0E74 /* StationData.swift in Sources */,
 				3C538E6C2002373A00CBEE1A /* City.swift in Sources */,
+				3C74D71A2008E197004C0E74 /* SensorTableViewCellContent.swift in Sources */,
 				3C3C7AEB2004128E00C58D4F /* StationSensors.swift in Sources */,
+				3C74D7182008E0F6004C0E74 /* SensorTableViewCell.swift in Sources */,
 				3C409F4A20010EDA007AFB3A /* AppDelegate.swift in Sources */,
+				3C74D723200980CA004C0E74 /* Sensor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

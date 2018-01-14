@@ -96,7 +96,13 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate, UISear
             
             do {
                 self.stationSensors = try JSONDecoder().decode([StationSensors].self, from: data)
-                self.performSegue(withIdentifier: "DetailsViewController", sender: nil)
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
+                vc.stationSensors = self.stationSensors
+                vc.stationId = station.id
+                OperationQueue.main.addOperation {
+                    self.present(vc, animated: true, completion: nil)
+                }
+//                self.performSegue(withIdentifier: "DetailsViewController", sender: nil)
                 
             } catch let error {
                 print(error)
@@ -132,7 +138,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate, UISear
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        self.searchBar.showsCancelButton = true
+//        self.searchBar.showsCancelButton = true
     }
     
 }

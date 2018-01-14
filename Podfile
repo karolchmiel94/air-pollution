@@ -8,5 +8,7 @@ target 'Air Pollution' do
   # Pods for Air Pollution
   pod 'Gifu'
   pod 'Alamofire'
+  pod 'NVActivityIndicatorView'
+  pod 'SwiftyJSON'
 
 end
